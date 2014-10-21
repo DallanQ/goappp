@@ -12,14 +12,14 @@ import (
 func main() {
 	args := os.Args[1:]
 	if len(args) == 0 {
-		log.Fatalln("gop: Provide a Go command.")
+		log.Fatalln("goappp: Provide a Goapp command.")
 	}
 	wd, err := os.Getwd()
 	if err != nil {
-		log.Fatalln("gop: Unable to get working directory.")
+		log.Fatalln("goappp: Unable to get working directory.")
 	}
 	src := srcDir(wd)
-	cmd := exec.Command("go", args...)
+	cmd := exec.Command("goapp", args...)
 	if src != "" {
 		fmt.Printf("Running with custom GOPATH: %s\n", src)
 		env := os.Environ()
@@ -31,7 +31,7 @@ func main() {
 	cmd.Stdin = os.Stdin
 	cmd.Stdout = os.Stdout
 	if cmd.Start() != nil {
-		log.Fatalln("gop: Unable to start command.")
+		log.Fatalln("goappp: Unable to start command.")
 	}
 	_ = cmd.Wait()
 }

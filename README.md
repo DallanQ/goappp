@@ -1,7 +1,7 @@
-Gop
+Goappp
 ===
 
-Gop is a GOPATH resolution tool. It allows you to execute Go commands with local GOPATH resolution.
+Goappp is a GOPATH resolution tool along the lines of vegasje/gop. It allows you to execute Goapp commands with local GOPATH resolution.
 
 For example, if your directory structure looks like this:
 
@@ -16,5 +16,5 @@ project
 					main.go
 ```
 
-The following command would work and install the executable inside project/bin:
-- gop install (inside of project/github.com/username/project)
+The following command would set GOPATH to project anywhere inside of project/github.com/username/project:
+- goappp serve
